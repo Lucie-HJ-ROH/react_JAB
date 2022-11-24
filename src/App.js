@@ -42,7 +42,7 @@ function CounterDisplay(props){
 
 function UserActions(props) {
     const handleOnClick = () =>{
-        props.setColor(toggle(props.color));
+        props.setColor(props.color==='blue'? "red":"blue");
         props.setCount(props.count + 1)
     }
     return (
@@ -52,15 +52,9 @@ function UserActions(props) {
     )
 }
 
-function toggle(color) {
-    if (color === "blue") {
-        return "red";
-    } else if (color === "red") {
-        return "green";
-    } else {
-        return "blue";
-    }
-}
+// function toggle(color) {
+//     return color==='blue'? "red":"blue"
+// }
 
 function DisplayMessage(props) {
     return <h1 style={{color: props.color}}>Hello React World</h1>;
