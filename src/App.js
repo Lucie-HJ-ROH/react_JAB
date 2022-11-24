@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import Hello from "./Hello";
 
 
@@ -9,7 +9,7 @@ function App() {
     console.log(color);
     console.log(count);
 
-    React.useEffect(() => {
+    useEffect(() => {
         sessionStorage.setItem('color', JSON.stringify(color));
         localStorage.setItem('count', JSON.stringify(count));
 
@@ -68,9 +68,9 @@ function DisplayMessage(props) {
 
 
 function Clock(props) {
-    const [time, setTime] = React.useState(
+    const [time, setTime] = useState(
         new Date().toLocaleTimeString());
-    React.useEffect(() => {
+    useEffect(() => {
         const interval = setInterval(() =>
             setTime(new Date().toLocaleTimeString(), 1000));
         return () => {
