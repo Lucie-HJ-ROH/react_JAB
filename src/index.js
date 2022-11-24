@@ -5,12 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-setInterval(()=>
-    root.render(
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>
-    ),1000
+
+root.render(
+    <React.StrictMode>
+        <App/>
+    </React.StrictMode>
 )
 
 
