@@ -23,7 +23,7 @@ function App() {
                 setColor={setColor}
                 setCount={setCount}
                 count={count}
-                :ㅃcolor={color}/>
+                color={color}/>
         </div>
     );
 
