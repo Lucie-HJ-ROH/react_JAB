@@ -41,13 +41,13 @@ function CounterDisplay(props){
 
 
 function UserActions(props) {
+    const handleOnClick = () =>{
+        props.setColor(toggle(props.color));
+        props.setCount(props.count + 1)
+    }
     return (
-        <button onClick={() => {
-            props.setColor(toggle(props.color));
-            props.setCount(props.count + 1)
-        }}>
+        <button onClick={handleOnClick}>
             Click me React
-
         </button>
     )
 }
