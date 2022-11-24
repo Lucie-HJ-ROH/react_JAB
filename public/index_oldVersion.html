@@ -92,7 +92,6 @@
             return (<p>React Clock2: {this.props.time} </p>);
         }
     }
-
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<Main2/>);
     setInterval(() => root.render(<Main2/>), 2000);
