@@ -14,18 +14,32 @@ function App() {
         localStorage.setItem('count', JSON.stringify(count));
 
     }, [color, count]);
-    return (<div>
+    return (
+        <div>
             <DisplayMessage color={color}/>
             <Clock/>
-            <p>{count}</p>
-            <button onClick={() => {
-                setColor(toggle(color));
-                setCount(count + 1)
-            }}>
-                Click me React
-            </button>
+            <p> {count} </p>
+            <UserActions
+                setColor={setColor}
+                setCount={setCount}
+                count={count}
+                :ㅃcolor={color}/>
         </div>
     );
+
+
+}
+
+function UserActions(props) {
+    return (
+        <button onClick={() => {
+            props.setColor(toggle(props.color));
+            props.setCount(props.count + 1)
+        }}>
+            Click me React
+
+        </button>
+    )
 }
 
 function toggle(color) {
