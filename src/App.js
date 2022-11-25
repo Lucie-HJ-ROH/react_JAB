@@ -6,7 +6,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 import {About} from "./component/About";
 import {Contact} from "./component/Contact";
-import Header from "./component/Header";
+import Header from "./layouts/Header";
 
 function App() {
     return (
